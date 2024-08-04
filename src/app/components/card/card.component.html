@@ -1,0 +1,30 @@
+<div id="card-holder">
+  <mat-card class="example-card" appearance="outlined">
+    <img mat-card-image src="assets/bill%201.png" alt="">
+    <mat-card-header id="card-header">
+      <mat-card-title>{{ this.name }}</mat-card-title>
+      <mat-card-subtitle>Còn {{ this.inStock }} sản phẩm</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        {{ this.description }}
+      </p>
+    </mat-card-content> <div>
+
+  </div>
+    <mat-card-actions id="price">
+      <section>
+        <div class="example-button-row">
+          <button (click)="
+              addToCart({
+              id: this.id,
+              name: this.name,
+              price: this.price,
+              quantity: 1,
+  })" style="background-color: red" mat-flat-button>Add to cart </button>
+        </div>
+      </section>
+      <mat-card-subtitle style="font-size: 20px">{{ this.price }} đồng</mat-card-subtitle>
+    </mat-card-actions>
+  </mat-card>
+</div>
