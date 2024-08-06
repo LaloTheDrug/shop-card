@@ -1,0 +1,21 @@
+#navbar{
+  height: 6%;
+  width: 100%;
+  background-color: orange;
+  display: flex;
+  justify-content: space-between;
+}
+#navbar button {
+  background-color: orange;
+  color: black;
+}
+#navbar button:hover {
+  background-color: black;
+  color: orange;
+}
+#log-btn {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

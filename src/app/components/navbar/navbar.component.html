@@ -1,0 +1,13 @@
+<div id="navbar">
+  <div>
+    <button [routerLink]="['/home']" mat-flat-button>Trang Chu</button>
+    <button [routerLink]="['/products']" mat-flat-button>San Pham</button>
+    <button [routerLink]="['/cart']" mat-flat-button>Gio Hang</button>
+  </div>
+  <div id="log-btn">
+    <img style="border-radius: 100%;width: 15%"
+         src="{{authService.currentUser}}">
+    <button (click)="authService.login()" mat-flat-button>đăng nhập</button>
+    <button (click)="authService.logout()" mat-flat-button>đăng xuất</button>=
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<div id ="conteiner">
+  @for (product of this.cartService.products; track $index){
+    <app-card [product]="product"></app-card>
+  }
+</div>

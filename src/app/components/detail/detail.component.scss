@@ -1,0 +1,35 @@
+.example-card{
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  color: black;
+  background-color: white;
+}
+.example-card img{
+  width: 700px;
+  height: 100%;
+  border-radius: 10px;
+}
+.mat-mdc-card-subtitle{
+  font-size: 14px;
+  color: black;
+}
+.mat-mdc-card-title{
+  font-size: 48px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+ margin: 20px 0px;
+}
+.mat-mdc-card-title~.mat-mdc-card-subtitle{
+  font-size: 24px;
+  color: black;
+  margin: 20px 0px;
+}
+.mat-mdc-button-touch-target {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+}

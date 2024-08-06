@@ -1,27 +1,26 @@
-import {Component, EventEmitter, Input, numberAttribute, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {ServicesService} from "../../Services/services.service";
+import {ProductModel} from "../../models/product.model";
 import {MatIconModule} from "@angular/material/icon";
 import {MatDividerModule} from "@angular/material/divider";
 import {MatButtonModule} from "@angular/material/button";
 import {MatCardModule} from "@angular/material/card";
-import {ProductModel} from "../../models/product.model";
-import {RouterLink} from "@angular/router";
 
 @Component({
-  selector: 'app-card',
+  selector: 'app-detail',
   standalone: true,
-  imports: [MatIconModule, MatDividerModule, MatButtonModule, MatCardModule, RouterLink],
-  templateUrl: './card.component.html',
-  styleUrl: './card.component.scss'
+  imports: [MatIconModule, MatDividerModule, MatButtonModule, MatCardModule],
+  templateUrl: './detail.component.html',
+  styleUrl: './detail.component.scss'
 })
-export class CardComponent {
+export class DetailComponent {
   constructor(public cartService: ServicesService) {}
-    addToCart(value: any) {
+  addToCart(value: any) {
     this.cartService.addToCart(value);
   }
-    removeFromCart(index: any) {
+  removeFromCart(index: any) {
     this.cartService.removeFromCart(index);
-    }
+  }
   @Input() product !: ProductModel;
 
   @Output() buttonClick  = new EventEmitter();

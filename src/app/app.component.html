@@ -1,32 +1,6 @@
-<div id="card-content">
-  @for (prod of this.cartService.products; track $index){
-    <app-card
-      [id]="prod.id"
-      [name]="prod.name"
-      [price]="prod.price"
-      [description]="prod.description"
-      [inStock]="prod.inStock"
-    ></app-card>
-  }
-</div>
-<div id="cart-shop">
-  <div id="cart-item">
-    @for (item of cartService.cart; track $index){
-      <div id="cart-item-content">
-        <h2 id="cart-item-name">{{ item.name }}</h2>
-        <h2 id="cart-item-total">{{item.total}} đồng</h2>
-        <h2 id="cart-item-quantity">{{ item.quantity }}</h2>
-        <button id="cart-item-btn" (click)="cartService.removeFromCart($index)" mat-fab aria-label="Example icon button with a delete icon">
-          <mat-icon>delete</mat-icon>
-        </button>
-      </div>
-    }
-  </div>
-  <div id="cart-total">
-    <button id="cart-btn" (click)="cartService.calculateTotal()" mat-flat-button>Checkout</button>
-    <h2 id="cart-price">{{cartService.totalItems }}</h2>
-  </div>
-</div>
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>
+
 
 
 
